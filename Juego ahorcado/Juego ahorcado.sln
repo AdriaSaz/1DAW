@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUI", "CUI\CUI.csproj", "{6EFB584B-EDA9-4403-8202-A25414B8E513}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica Juego", "Logica Juego\Logica Juego.csproj", "{0F2C4000-C105-4244-BDD8-82CB80D7AE19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3DGraphics", "3DGraphics\3DGraphics.csproj", "{A9E11905-CFFA-40BA-B3F7-2E51F1E7E2A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EFB584B-EDA9-4403-8202-A25414B8E513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFB584B-EDA9-4403-8202-A25414B8E513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFB584B-EDA9-4403-8202-A25414B8E513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFB584B-EDA9-4403-8202-A25414B8E513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2C4000-C105-4244-BDD8-82CB80D7AE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2C4000-C105-4244-BDD8-82CB80D7AE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2C4000-C105-4244-BDD8-82CB80D7AE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2C4000-C105-4244-BDD8-82CB80D7AE19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E11905-CFFA-40BA-B3F7-2E51F1E7E2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E11905-CFFA-40BA-B3F7-2E51F1E7E2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E11905-CFFA-40BA-B3F7-2E51F1E7E2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E11905-CFFA-40BA-B3F7-2E51F1E7E2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
