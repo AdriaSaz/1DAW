@@ -9,7 +9,7 @@ namespace _3DGraphics
 {
     public class Dibujo
     {
-        static public int[,] dibujo = new int[19, 14];
+        static public int[,] dibujo = new int[19,14];
         public static void cargando()
         {
 
