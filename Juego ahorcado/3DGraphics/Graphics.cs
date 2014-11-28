@@ -25,9 +25,7 @@ namespace _3DGraphics
             Console.WriteLine();
         }   
 
-        /// <summary>
-        ///  ahorca
-        /// </summary>
+       //Creador de poster
         static public void dibujo_inicial()
         {
             int i, j;
@@ -50,7 +48,7 @@ namespace _3DGraphics
         }
 
 
-        //metodo que dibuja 
+        //metodo universal que dibuja 
         public static void dibujar()
         {
             int i, j;
@@ -68,6 +66,7 @@ namespace _3DGraphics
         }
 
 
+        //MOdificador de dibujos segun el fallo ( caracter no acertado en la palabra)
         static public void fallo(int x)
         {
              int i,j;
@@ -75,18 +74,17 @@ namespace _3DGraphics
              switch(x)
              {
               
-             case 1:
+             case 0:
                    //CAP
                    for (i=6;i<=8;i++)
                    {    
-             
                       for (j=6;j<=8;j++)
                       {
                           dibujo[i,j]=35;                    
                       }      
                    }
                    break; 
-             case 2:
+             case 1:
                    //COS
            
                    for (i=9;i<=12;i++)
@@ -95,33 +93,33 @@ namespace _3DGraphics
                    }
                    break;
           
-             case 3:     
+             case 2:     
                    //BRAÇ ESQUERRE
           
                    dibujo[10,6]=35;
                    dibujo[11,5]=35;
                    dibujo[12,4]=35;
                    break;
-             case 4:
+             case 3:
                    //BRAÇ DRET
                    dibujo[10,8]=35;
                    dibujo[11,9]=35;
                    dibujo[12,10]=35;
                    break;
-             case 5:         
+             case 4:         
      
                    //CAMA ESQUERRE
                    dibujo[13,6]=35;
                    dibujo[14,5]=35;
                    dibujo[15,4]=35;
                    break;
-             case 6:           
+             case 5:           
                    //CAMA DRETA
                    dibujo[13,8]=35;
                    dibujo[14,9]=35;
                    dibujo[15,10]=35;
                    break;
-             case 7:
+             case 6:
                   //SOGA
            
                    for (j=4;j<=5;j++)
@@ -129,7 +127,44 @@ namespace _3DGraphics
                    break; 
   
              }
-             dibujar();
+             dibujar();//dibujamos
         }
+
+
+        static public void intro_Animado()
+        {
+    
+             System.Console.Clear(); 
+             Console.Write("###############################################################################\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("##                                                                           ##\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("##  Juego                                                                    ##\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("##  Autor:Adria saz                                                          ##\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("##  Ver.: 3.0                                                                ##\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("##                                                                           ##\n");
+             System.Threading.Thread.Sleep(250);
+             Console.Write("###############################################################################\n");
+             System.Threading.Thread.Sleep(250);
+             Console.WriteLine();
+            
+      }
+        static public void intro()
+        {
+
+                 System.Console.Clear(); 
+                 Console.Write("###############################################################################\n");
+                 Console.Write("##                                                                           ##\n");
+                 Console.Write("##  Juego                                                                    ##\n");
+                 Console.Write("##  Autor:Adria saz                                                          ##\n");
+	             Console.Write("##  Ver.: 3.0                                                                ##\n");
+	             Console.Write("##                                                                           ##\n");
+	             Console.Write("###############################################################################\n");
+                 Console.Write("\n");
+        }
+
     }
 }

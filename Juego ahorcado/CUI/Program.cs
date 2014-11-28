@@ -14,17 +14,25 @@ namespace CUI
     {
         static void Main(string[] args)
         {
+            string entrada;
             char letra;
-            bool acierto,fin = false;
+            bool estado = false;
           
             string palabra;
+            Dibujo.intro_Animado();
+            do
+            {
+                Console.WriteLine("Introduce una palabra a ocultar");
+                entrada = Console.ReadLine();
+                estado = Juego.FiltrarPalabra(entrada);
 
-            Console.WriteLine("Introduce una palabra a ocultar");
-            palabra = Console.ReadLine();
+               
+            } while (!estado);
+            palabra = entrada;
             //Ocultamos palabra para mostrarla ocuulta
             Juego.OcultarPalabra(palabra);
             //recogemos la letra
-            Dibujo.cargando();
+           
             Dibujo.dibujo_inicial();
            
             do
@@ -34,16 +42,13 @@ namespace CUI
                 Console.WriteLine("{0}", Juego.Oculto);
                 Console.WriteLine("Introduce una letra");
                 letra = Console.ReadLine()[0];
-                acierto = Juego.ComprobarLetra(letra,palabra);
-                if(acierto)
-                {
-                    fin = Juego.ComprobarPalabraFin(palabra);
-                }
+                Juego.fin = Juego.ComprobarLetra(letra,palabra);
+               
                 
-            } while (!fin && Juego.intentos != 7);
+            } while (!Juego.fin && Juego.intentos != 7);
                 
            
-         if(acierto)
+         if(Juego.fin)
          {
              Console.WriteLine("enhorabuena has acertado la palabra oculta '{0}'", palabra);
          }
@@ -55,5 +60,7 @@ namespace CUI
             Console.WriteLine(letra);
             Console.ReadKey();
         }
+
+       
     }
 }
