@@ -14,14 +14,18 @@ namespace CUI
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(130, 50);
             string entrada;
             char letra;
             bool estado = false;
           
             string palabra;
-            Dibujo.intro_Animado();
+            //Dibujo.intro_Animado();
+            
             do
             {
+                System.Console.Clear();
+                Dibujo.cabecera();
                 Console.WriteLine("Introduce una palabra a ocultar");
                 entrada = Console.ReadLine();
                 estado = Juego.FiltrarPalabra(entrada);
@@ -32,16 +36,31 @@ namespace CUI
             //Ocultamos palabra para mostrarla ocuulta
             Juego.OcultarPalabra(palabra);
             //recogemos la letra
+           Dibujo.dibujo_inicial();
            
-            Dibujo.dibujo_inicial();
            
             do
             {
-              
-                Console.WriteLine(Juego.intentos);
-                Console.WriteLine("{0}", Juego.Oculto);
-                Console.WriteLine("Introduce una letra");
-                letra = Console.ReadLine()[0];
+
+                do
+                {
+                    System.Console.Clear();
+                    Dibujo.cabecera();
+                    estado = true;
+                    if (!estado) Dibujo.dibujo_inicial(); else Dibujo.dibujar();
+
+                    Console.WriteLine("█▀▀▀▀█");
+                    Console.WriteLine("█ {0}  █", Juego.intentos);
+                    Console.WriteLine("█▄▄▄▄█");
+                    
+                  
+                    Console.WriteLine("{0}", Juego.Oculto);
+                    Console.WriteLine("Introduce una letra");
+                    entrada = Console.ReadLine();
+                    estado = Juego.FiltrarPalabra(entrada);
+                } while (!estado);
+
+                letra = entrada[0];
                 Juego.fin = Juego.ComprobarLetra(letra,palabra);
                
                 
@@ -54,10 +73,11 @@ namespace CUI
          }
          else
          {
+             Dibujo.GameOver();
              Console.WriteLine("Lo siento no acertaste la palabra. la palabra era {0}, te quedaste en {1}", palabra, Juego.Oculto);
          }
 
-            Console.WriteLine(letra);
+         
             Console.ReadKey();
         }
 

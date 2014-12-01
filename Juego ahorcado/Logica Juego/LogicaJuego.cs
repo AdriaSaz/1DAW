@@ -42,7 +42,7 @@ namespace LogicaJuego
             }
             if(cont>0)
             {   //si el contador es mayor a 0 dibujamos el dibujo sin modificar
-                Dibujo.dibujar();
+               
                 return fin = Juego.ComprobarPalabraFin(palabra);
             }
             else
@@ -78,21 +78,27 @@ namespace LogicaJuego
              int num;
             if (string.IsNullOrEmpty(palabra))
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error!! no se permite palabras vacias\n Pulse una tecla para continuar...");
+                Console.ResetColor();
                 Console.ReadKey();
-                Dibujo.intro();
+               // Dibujo.intro();
                 return false;
             }
             else
                
                 if (int.TryParse(palabra, out num))
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error!! no se permite cadenas de numeros\n Pulse una tecla para continuar...");
+                    Console.ResetColor();
                     Console.ReadKey();
-                    Dibujo.intro();
+                    //Dibujo.intro();
                     return false;
                 }
             return true; //es un string y no esta vacio
         }
+
+       
     }
 }
