@@ -192,7 +192,8 @@ namespace _3DGraphics
 
             System.Console.Clear(); 
             Console.ForegroundColor = ConsoleColor.Red;
-
+            Console.WriteLine("\n\n\n");
+                                                     
          Console.WriteLine("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ");
          Console.WriteLine(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒");
          Console.WriteLine("▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒");
@@ -206,6 +207,18 @@ namespace _3DGraphics
          Console.ResetColor();
          Console.WriteLine("\n\n\n");
 
+        }
+
+        static public void MarcoContador(int intento){
+
+       
+                    Console.WriteLine("█▀▀▀▀█");
+                    Console.Write("█");
+                    if (intento >= 5) Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(" {0}  ",intento);
+                    Console.ResetColor();
+                    Console.WriteLine("█");
+                    Console.WriteLine("█▄▄▄▄█");
         }
     }
 }

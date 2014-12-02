@@ -14,7 +14,7 @@ namespace CUI
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(130, 50);
+            Console.SetWindowSize(105, 50);
             string entrada;
             char letra;
             bool estado = false;
@@ -32,6 +32,7 @@ namespace CUI
 
                
             } while (!estado);
+            Dibujo.cargando();
             palabra = entrada;
             //Ocultamos palabra para mostrarla ocuulta
             Juego.OcultarPalabra(palabra);
@@ -49,9 +50,7 @@ namespace CUI
                     estado = true;
                     if (!estado) Dibujo.dibujo_inicial(); else Dibujo.dibujar();
 
-                    Console.WriteLine("█▀▀▀▀█");
-                    Console.WriteLine("█ {0}  █", Juego.intentos);
-                    Console.WriteLine("█▄▄▄▄█");
+                    Dibujo.MarcoContador(Juego.intentos);
                     
                   
                     Console.WriteLine("{0}", Juego.Oculto);
