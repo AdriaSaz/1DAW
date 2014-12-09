@@ -29,22 +29,32 @@ namespace CUI
                 Dibujo.cabecera();
                Console.WriteLine("1)Maquina vs jugador\n2)jugadorvsjugador");
                  int option = int.Parse(Console.ReadLine());
-                if(option ==2)
-                {
-                 Console.WriteLine("Introduce una palabra a ocultar");
-                entrada = Console.ReadLine();
-                estado = Juego.FiltrarPalabra(entrada);
-                }
-               else 
-              {
-                  entrada =IOFiles.RandomWord();
-
+               switch (option)
+               {
+                   case 1:
+                       entrada =IOFiles.RandomWord();
+                        estado = true;
+                        break;
+                   case 2:
+                         Console.WriteLine("Introduce una palabra a ocultar");
+                         entrada = Console.ReadLine();
+                         estado = Juego.FiltrarPalabra(entrada);
+                         break;
+                   default:
+                         Console.WriteLine("Error");
+                         entrada = "";
+                         estado = false;
+                         break;
                }
+                
+                
+               
 
                
             } while (!estado);
             Dibujo.cargando();
-            palabra = entrada;
+            palabra = entrada.ToUpper();
+           
             //Ocultamos palabra para mostrarla ocuulta
             Juego.OcultarPalabra(palabra);
             //recogemos la letra
@@ -63,12 +73,13 @@ namespace CUI
 
                     Dibujo.MarcoContador(Juego.intentos);
                     Console.WriteLine("ADIVINA");
-                    Console.WriteLine("\n---------------------------------------");
+                    //Console.WriteLine(palabra);
+                    Console.WriteLine("\n-----------------------------------------");
                     Console.WriteLine("{0}", Juego.hword);
                     Console.WriteLine("-----------------------------------------");
 
                     Console.WriteLine("Introduce una letra");
-                    entrada = Console.ReadLine();
+                    entrada = Console.ReadLine().ToUpper();
                     estado = Juego.FiltrarPalabra(entrada);
                 } while (!estado);
 

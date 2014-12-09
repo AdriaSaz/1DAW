@@ -25,16 +25,17 @@ namespace ReadFile
             }
             string linea;
             Console.WriteLine(counter);
-
-            int num = alea.Next(0, counter);
+            file.Close();
+            int num = alea.Next(1, counter-1);
             counter = 0;
             while ((linea = file.ReadLine()) != null)
             {
 
                 if(num == counter++)
                 {
+                    Console.Write(linea);
                     file.Close();
-                   
+                    break;
                     
                 }
             }
