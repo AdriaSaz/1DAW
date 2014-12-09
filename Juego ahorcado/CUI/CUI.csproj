@@ -56,6 +56,10 @@
       <Project>{0f2c4000-c105-4244-bdd8-82cb80d7ae19}</Project>
       <Name>Logica Juego</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReadFile\ReadFile.csproj">
+      <Project>{843871a1-d50e-4e6e-aaac-3a68f4ca23a9}</Project>
+      <Name>ReadFile</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LogicaJuego;
 using _3DGraphics;
-
+using ReadFile;
 
 
 namespace CUI
@@ -27,18 +27,19 @@ namespace CUI
                 System.Console.Clear();
                 Dibujo.intro_Animado();
                 Dibujo.cabecera();
-                //Console.WriteLine("1)Maquina vs jugador\n2)jugadorvsjugador");
-                //    int option = int.Parse(Console.ReadLine());
-                //if(option ==2)
-                //{
+               Console.WriteLine("1)Maquina vs jugador\n2)jugadorvsjugador");
+                 int option = int.Parse(Console.ReadLine());
+                if(option ==2)
+                {
                  Console.WriteLine("Introduce una palabra a ocultar");
                 entrada = Console.ReadLine();
                 estado = Juego.FiltrarPalabra(entrada);
-                //}
-                //else 
-                //{
+                }
+               else 
+              {
+                  entrada =IOFiles.RandomWord();
 
-                //}
+               }
 
                
             } while (!estado);
@@ -61,9 +62,11 @@ namespace CUI
                     if (!estado) Dibujo.dibujo_inicial(); else Dibujo.dibujar();
 
                     Dibujo.MarcoContador(Juego.intentos);
-                    
-                  
+                    Console.WriteLine("ADIVINA");
+                    Console.WriteLine("\n---------------------------------------");
                     Console.WriteLine("{0}", Juego.hword);
+                    Console.WriteLine("-----------------------------------------");
+
                     Console.WriteLine("Introduce una letra");
                     entrada = Console.ReadLine();
                     estado = Juego.FiltrarPalabra(entrada);

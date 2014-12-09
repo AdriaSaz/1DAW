@@ -10,11 +10,11 @@ namespace ReadFile
 
     {
         static Random alea = new Random();
-        static System.IO.StreamReader file = new System.IO.StreamReader(@"dictonary");
-        static public string CountLines(string FileName)
+        static System.IO.StreamReader file = new System.IO.StreamReader(@".\dictonary.txt");
+        static public string RandomWord()
 
         {
-
+            Console.ReadKey();
 
             int counter = 0;
             
@@ -24,6 +24,8 @@ namespace ReadFile
                 counter++;
             }
             string linea;
+            Console.WriteLine(counter);
+
             int num = alea.Next(0, counter);
             counter = 0;
             while ((linea = file.ReadLine()) != null)
@@ -36,6 +38,8 @@ namespace ReadFile
                     
                 }
             }
+            Console.WriteLine(linea);
+            Console.ReadKey();
             return linea;
            
         }
