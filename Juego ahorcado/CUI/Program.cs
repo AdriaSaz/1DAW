@@ -25,10 +25,20 @@ namespace CUI
             do
             {
                 System.Console.Clear();
+                Dibujo.intro_Animado();
                 Dibujo.cabecera();
-                Console.WriteLine("Introduce una palabra a ocultar");
+                //Console.WriteLine("1)Maquina vs jugador\n2)jugadorvsjugador");
+                //    int option = int.Parse(Console.ReadLine());
+                //if(option ==2)
+                //{
+                 Console.WriteLine("Introduce una palabra a ocultar");
                 entrada = Console.ReadLine();
                 estado = Juego.FiltrarPalabra(entrada);
+                //}
+                //else 
+                //{
+
+                //}
 
                
             } while (!estado);
@@ -53,7 +63,7 @@ namespace CUI
                     Dibujo.MarcoContador(Juego.intentos);
                     
                   
-                    Console.WriteLine("{0}", Juego.Oculto);
+                    Console.WriteLine("{0}", Juego.hword);
                     Console.WriteLine("Introduce una letra");
                     entrada = Console.ReadLine();
                     estado = Juego.FiltrarPalabra(entrada);
@@ -73,7 +83,7 @@ namespace CUI
          else
          {
              Dibujo.GameOver();
-             Console.WriteLine("Lo siento no acertaste la palabra. la palabra era {0}, te quedaste en {1}", palabra, Juego.Oculto);
+             Console.WriteLine("Lo siento no acertaste la palabra. la palabra era {0}, te quedaste en {1}", palabra, Juego.hword);
          }
 
          

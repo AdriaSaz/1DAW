@@ -11,7 +11,7 @@ namespace LogicaJuego
     public static class Juego
     {
         public static int largo; // longitud de la palabra
-        public static string Oculto; //Contiene la palabra codificada
+        public static string hword; //Contiene la palabra codificada
         public static bool fin = false; // Cuando fin es true el juego ha terminado por que la palabra se ha acertado
         public static int intentos = 0; // num de fallos/intentos
 
@@ -23,7 +23,7 @@ namespace LogicaJuego
             
             for (int i = 0; i < largo; i++)
             {
-                Oculto = Oculto + "*";
+                hword = hword + "*";
             }
 
         }
@@ -58,9 +58,9 @@ namespace LogicaJuego
        //metodo que remplaza el caracter acertado solo si se acierta uno o mas caracteres
         private static void RemplazoLetra(char letra, int i)
         {
-            StringBuilder sbOculto = new StringBuilder(Oculto);
+            StringBuilder sbOculto = new StringBuilder(hword);
             sbOculto[i] = letra;
-            Oculto = sbOculto.ToString();
+            hword = sbOculto.ToString();
         }
 
         
@@ -69,7 +69,7 @@ namespace LogicaJuego
         //Comprobador si la palabra ha sido acertada
         public static bool ComprobarPalabraFin(string palabra)
         {
-            return palabra.Equals(Oculto) ? true : false;
+            return palabra.Equals(hword) ? true : false;
                
         }
 
@@ -98,6 +98,10 @@ namespace LogicaJuego
                 }
             return true; //es un string y no esta vacio
         }
+
+
+        //LECTURA DE FICHEROS
+
 
        
     }
