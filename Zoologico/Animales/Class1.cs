@@ -4,20 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Animales
 {
-    class Animales
+    static public enum TipoAnimal { Gallo, Perro, Gato, Periquito }
+
+    public class Animal
     {
-       
-        static void Main()
-        {
-            
-            Animal Gato = new Animal(Tipo)
+        
 
-
-
-            
-        }
     }
 }

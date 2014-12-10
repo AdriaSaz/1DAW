@@ -47,6 +47,10 @@
       <Project>{a9e11905-cffa-40ba-b3f7-2e51f1e7e2a5}</Project>
       <Name>3DGraphics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReadFile\ReadFile.csproj">
+      <Project>{843871a1-d50e-4e6e-aaac-3a68f4ca23a9}</Project>
+      <Name>ReadFile</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

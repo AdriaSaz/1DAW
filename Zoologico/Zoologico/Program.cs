@@ -3,21 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
-namespace Animales
+using Animales;
+namespace Zoologico
 {
-    class Animales
+    class Program
     {
-       
         static void Main()
         {
-            
-            Animal Gato = new Animal(Tipo)
-
-
-
-            
+            Animal Gato = new Animal(TipoAnimal.Gato);
         }
     }
 }

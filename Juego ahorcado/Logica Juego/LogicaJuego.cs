@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _3DGraphics;
+using ReadFile;
 
 namespace LogicaJuego
 {
@@ -36,12 +37,12 @@ namespace LogicaJuego
             {
                 if(palabra.Substring(i,1)[0] == letra)
                 {
-                    RemplazoLetra(letra, i);
+                    RemplazoLetra(letra, i);//llamo al metodo 
                     cont++;
                 }
             }
             if(cont>0)
-            {   //si el contador es mayor a 0 dibujamos el dibujo sin modificar
+            {   //si el contador es mayor a 0 dibujamos el dibujo sin modificar 
                
                 return fin = Juego.ComprobarPalabraFin(palabra);
             }
@@ -59,8 +60,8 @@ namespace LogicaJuego
         private static void RemplazoLetra(char letra, int i)
         {
             StringBuilder sbOculto = new StringBuilder(hword);
-            sbOculto[i] = letra;
-            hword = sbOculto.ToString();
+            sbOculto[i] = letra;//cambio de letra
+            hword = sbOculto.ToString();// actualizo variable con palabra oculta
         }
 
         
@@ -76,7 +77,7 @@ namespace LogicaJuego
         public static bool FiltrarPalabra(string palabra)
         {
              int num;
-            if (string.IsNullOrEmpty(palabra))
+            if (string.IsNullOrEmpty(palabra))//controla  que la cadena introducida no es vacia
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error!! no se permite palabras vacias\n Pulse una tecla para continuar...");
@@ -87,7 +88,7 @@ namespace LogicaJuego
             }
             else
                
-                if (int.TryParse(palabra, out num))
+                if (int.TryParse(palabra, out num))///comrueba que no se introduzcan numeros como palabra para adivinar
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error!! no se permite cadenas de numeros\n Pulse una tecla para continuar...");

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BC84C30-5168-442D-9C46-480C86A46526}</ProjectGuid>
+    <ProjectGuid>{791828E0-58CB-4AA7-BA44-5C030332B19D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Animales</RootNamespace>
-    <AssemblyName>Animales</AssemblyName>
+    <RootNamespace>Zoologico</RootNamespace>
+    <AssemblyName>Zoologico</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,9 +49,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Animal.csproj">
-      <Project>{7fab199a-5a21-495e-935f-a4712b5afc28}</Project>
-      <Name>Animal</Name>
+    <ProjectReference Include="..\Animales\Animales.csproj">
+      <Project>{766492b7-bd2f-4b15-bfee-1b7b90e3268a}</Project>
+      <Name>Animales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perro\Perro.csproj">
+      <Project>{71ce31ad-6d82-449a-a737-af548091ec22}</Project>
+      <Name>Perro</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

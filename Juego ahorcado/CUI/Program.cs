@@ -14,6 +14,7 @@ namespace CUI
     {
         static void Main(string[] args)
         {
+            //ReadFile.IOFiles.file.Close();
             Console.SetWindowSize(105, 50);
             string entrada;
             char letra;
@@ -39,6 +40,8 @@ namespace CUI
                          Console.WriteLine("Introduce una palabra a ocultar");
                          entrada = Console.ReadLine();
                          estado = Juego.FiltrarPalabra(entrada);
+                         IOFiles.AmpliaDiccionario(entrada);
+
                          break;
                    default:
                          Console.WriteLine("Error");

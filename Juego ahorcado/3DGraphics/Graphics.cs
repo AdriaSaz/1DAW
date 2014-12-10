@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+//Dibujo creado con una array bidimensional con caracteres ascii
 namespace _3DGraphics
 {
     public class Dibujo
     {
-        static public int[,] dibujo = new int[19,14];
-        public static void cargando()
+        static public int[,] dibujo = new int[19,14];//plantilla dibujo 
+        public static void cargando()//barra de carga
         {
 
             int car = 20;
@@ -67,7 +68,7 @@ namespace _3DGraphics
         }
 
 
-        //MOdificador de dibujos segun el fallo ( caracter no acertado en la palabra)
+        //MOdificador de dibujos segun el fallo ( caracter no acertado en la palabra) 
         static public void fallo(int x)
         {
              int i,j;
@@ -76,7 +77,7 @@ namespace _3DGraphics
              {
               
              case 0:
-                   //CAP
+                   //cabeza
                    for (i=6;i<=8;i++)
                    {    
                       for (j=6;j<=8;j++)
@@ -86,7 +87,7 @@ namespace _3DGraphics
                    }
                    break; 
              case 1:
-                   //COS
+                   //cuerpo
            
                    for (i=9;i<=12;i++)
                    {    
@@ -95,33 +96,33 @@ namespace _3DGraphics
                    break;
           
              case 2:     
-                   //BRAÇ ESQUERRE
+                   //brazo izquierdo
           
                    dibujo[10,6]=35;
                    dibujo[11,5]=35;
                    dibujo[12,4]=35;
                    break;
              case 3:
-                   //BRAÇ DRET
+                   //brazo derecho
                    dibujo[10,8]=35;
                    dibujo[11,9]=35;
                    dibujo[12,10]=35;
                    break;
              case 4:         
      
-                   //CAMA ESQUERRE
+                   //pierna izquierda
                    dibujo[13,6]=35;
                    dibujo[14,5]=35;
                    dibujo[15,4]=35;
                    break;
              case 5:           
-                   //CAMA DRETA
+                   //pierna derecha
                    dibujo[13,8]=35;
                    dibujo[14,9]=35;
                    dibujo[15,10]=35;
                    break;
              case 6:
-                  //SOGA
+                  //cuerda
            
                    for (j=4;j<=5;j++)
                      dibujo[j,7]=35;
@@ -136,21 +137,21 @@ namespace _3DGraphics
         {
     
              System.Console.Clear(); 
-             Console.Write("###############################################################################\n");
+             Console.Write("########################################################################################################\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("##                                                                           ##\n");
+             Console.Write("##                                                                                                    ##\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("##  Juego                                                                    ##\n");
+             Console.Write("##  Juego                                                                                             ##\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("##  Autor:Adria saz                                                          ##\n");
+             Console.Write("##  Autor:Adria saz                                                                                   ##\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("##  Ver.: 3.0                                                                ##\n");
+             Console.Write("##  Ver.: 3.0                                                                                         ##\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("##                                                                           ##\n");
+             Console.Write("##                                                                                                    ##\n");
              System.Threading.Thread.Sleep(250);
-             Console.Write("###############################################################################\n");
+             Console.Write("########################################################################################################\n");
              System.Threading.Thread.Sleep(250);
-             Console.WriteLine();
+             Console.WriteLine();  
             
       }
         static public void intro()
