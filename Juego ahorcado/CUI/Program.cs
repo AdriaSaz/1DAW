@@ -105,6 +105,7 @@ namespace CUI
 
          
             Console.ReadKey();
+            IOFiles.file.Close();
         }
 
        
