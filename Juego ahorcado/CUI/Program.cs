@@ -12,6 +12,8 @@ namespace CUI
 {
     class Program
     {
+
+        //RAFAPUIG: Mira donde tienes el proyecto ReadFile porque esta fuera del repositorio y no carga
         static void Main(string[] args)
         {
             //ReadFile.IOFiles.file.Close();
