@@ -74,6 +74,7 @@ namespace LogicaJuego
             {
                 hword = "";
               //  Array.Clear(Dibujo.dibujo, null, null);
+                intentos = 0;
                 return true;
             }else{
                 return false;
@@ -105,6 +106,7 @@ namespace LogicaJuego
                 }
             return true; //es un string y no esta vacio
         }
+
 
 
         //LECTURA DE FICHEROS
