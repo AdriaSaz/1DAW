@@ -85,7 +85,7 @@ namespace CUI
                         Console.WriteLine("{0}", Juego.hword);
                         Console.WriteLine("-----------------------------------------");
 
-                        Console.WriteLine("Introduce una letra\n->");
+                        Console.Write("Introduce una letra\n->");
                         entrada = Console.ReadLine().ToUpper();
                         PalabraOK = Juego.FiltrarPalabra(entrada);
                     } while (!PalabraOK);
@@ -106,9 +106,10 @@ namespace CUI
                     Dibujo.GameOver();
                     Console.WriteLine("Lo siento no acertaste la palabra. la palabra era {0}, te quedaste en {1}", palabra, Juego.hword);
                 }
-
+                Console.WriteLine("Pulse un boton para continuar...");
+                Console.ReadKey();
                 System.Console.Clear();
-                Console.WriteLine("Quieres jugar otra partida)\n>(S)i\n>(N)o\n->");
+                Console.Write("Quieres jugar otra partida)\n>(S)i\n>(N)o\n->");
                 entrada = Console.ReadLine().ToUpper();
                 resp = entrada[0];
             } while (resp != 'N');

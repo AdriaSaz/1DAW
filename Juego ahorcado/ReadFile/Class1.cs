@@ -13,7 +13,7 @@ namespace ReadFile
        /// string path =".\\dictonary.txt";
         static Random alea = new Random();
         //OBJETO ARCHIVO con permisos escritura/lectura
-        public static FileStream file = new FileStream(@".\dictionary", FileMode.OpenOrCreate, FileAccess.ReadWrite); //Archivo en CUI/bin/debug 
+        public static FileStream file = new FileStream(@"..\\..\\dictionary", FileMode.OpenOrCreate, FileAccess.ReadWrite); //Archivo en CUI/bin/debug 
         public static StreamWriter writer = new StreamWriter(file); //Objeto de lectura
         public static StreamReader Lectura = new StreamReader(file); //Objeto de escritura
 
