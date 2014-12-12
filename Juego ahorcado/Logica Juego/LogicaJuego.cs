@@ -70,8 +70,14 @@ namespace LogicaJuego
         //Comprobador si la palabra ha sido acertada
         public static bool ComprobarPalabraFin(string palabra)
         {
-            return palabra.Equals(hword) ? true : false;
-               
+            if (palabra.Equals(hword))
+            {
+                hword = "";
+              //  Array.Clear(Dibujo.dibujo, null, null);
+                return true;
+            }else{
+                return false;
+            }
         }
 
         public static bool FiltrarPalabra(string palabra)
