@@ -86,32 +86,33 @@ namespace LogicaJuego
              int num;
             if (string.IsNullOrEmpty(palabra))//controla  que la cadena introducida no es vacia
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error!! no se permite palabras vacias\n Pulse una tecla para continuar...");
-                Console.ResetColor();
-                Console.ReadKey();
+               
                // Dibujo.intro();
+                MensajeError("Error!! no se permite palabras vacias\n Pulse una tecla para continuar...");
                 return false;
             }
             else
                
                 if (int.TryParse(palabra, out num))///comrueba que no se introduzcan numeros como palabra para adivinar
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Error!! no se permite cadenas de numeros\n Pulse una tecla para continuar...");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    //Dibujo.intro();
+                   
+                    MensajeError("Error!! no se permite cadenas de numeros\n Pulse una tecla para continuar...");
+                   
                     return false;
                 }
             return true; //es un string y no esta vacio
         }
 
+        
+     public static void  MensajeError(string mensaje)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine(mensaje);
+        Console.ResetColor();
+        Console.ReadKey();
 
-
-        //LECTURA DE FICHEROS
-
-
-       
     }
+  
+    }
+
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace ReadFile
 {
     public class IOFiles
@@ -16,7 +17,7 @@ namespace ReadFile
        /// string path =".\\dictonary.txt";
         static Random alea = new Random();
         //OBJETO ARCHIVO con permisos escritura/lectura
-        public static FileStream file = new FileStream(@".\dictionary", FileMode.OpenOrCreate, FileAccess.ReadWrite); //Archivo en CUI/bin/debug 
+        public static FileStream file = new FileStream(@"..\\..\dictionary", FileMode.OpenOrCreate, FileAccess.ReadWrite); //Archivo en CUI/properties
         public static StreamWriter writer = new StreamWriter(file); //Objeto de lectura
         public static StreamReader Lectura = new StreamReader(file); //Objeto de escritura
 
@@ -70,7 +71,7 @@ namespace ReadFile
            }
            catch
            {
-               Console.WriteLine("Error escribindo en archivo\nOmitiendo escritura...");
+               Console.WriteLine("Error escribiendo en archivo\nOmitiendo escritura...");
            }
            
         }

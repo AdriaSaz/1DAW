@@ -40,21 +40,21 @@ namespace CUI
                         PalabraOK = int.TryParse(Console.ReadLine(), out option);
                     } while (!PalabraOK);
                     PalabraOK = false;
-                    switch (option)
+                    switch (option)// segun opcion realizada
                     {
                         case 1:
-                            entrada = IOFiles.RandomWord();
+                            entrada = IOFiles.RandomWord();// contra la maquina sacamos palabra al azr del archivo
                             PalabraOK = true;
                             break;
                         case 2:
-                            Console.WriteLine("Introduce una palabra a ocultar");
+                            Console.WriteLine("Introduce una palabra a ocultar");//introducimos palabra manualmente para jugador contra jugador
                             entrada = Console.ReadLine();
-                            PalabraOK = Juego.FiltrarPalabra(entrada);
-                            IOFiles.AmpliaDiccionario(entrada);
+                            PalabraOK = Juego.FiltrarPalabra(entrada);// validamos palabra
+                            IOFiles.AmpliaDiccionario(entrada);//y la añadimos al diccionario para una proxima partida
 
                             break;
                         default:
-                            Console.WriteLine("Error");
+                            Juego.MensajeError("Error, opcion no valida");
                             entrada = "";
                             PalabraOK = false;
                             break;
@@ -93,7 +93,7 @@ namespace CUI
                     } while (!PalabraOK);
 
                     letra = entrada[0];
-                    Juego.fin = Juego.ComprobarLetra(letra, palabra);
+                    Juego.fin = Juego.ComprobarLetra(letra, palabra);// comprobamos letra
 
 
                 } while (!Juego.fin && Juego.intentos != 7);
