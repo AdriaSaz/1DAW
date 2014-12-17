@@ -111,6 +111,7 @@ namespace LogicaJuego
         Console.ResetColor();
         Console.ReadKey();
 
+
     }
   
     }
